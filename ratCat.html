@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ratCat</title>
+</head>
+<body>
+<script>
+    let Mouse = function (name, weight, movementSpeed) {
+        this.name = name;
+        this.weight = weight;
+        this.movementSpeed = movementSpeed;
+        this.status = true;
+        this.sound = function () {
+            alert("chit chit");
+        }
+        this.getWeight = function () {
+            return this.weight;
+        }
+        this.setWeight = function (newWeight) {
+            this.weight = newWeight
+        }
+        this.getMovementSpeed = function () {
+            return this.movementSpeed;
+        }
+        this.getName = function () {
+            return this.name;
+        }
+    }
+    let Cat = function (name, maxMovementSpeed, weight) {
+        this.name = name;
+        this.maxMovementSpeed = maxMovementSpeed;
+        this.weight = weight;
+        this.sound = function () {
+            alert("meow mewo");
+        }
+        this.catchMouse = function (mouse) {
+            if (this.maxMovementSpeed > mouse.getMovementSpeed()){
+                alert(this.name + " da bat duoc con chuot "+ mouse.name)
+            }
+        }
+    }
+</script>
+</body>
+</html>
